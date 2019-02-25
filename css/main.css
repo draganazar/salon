@@ -145,14 +145,24 @@ section {
     background: #333;
     padding: 4px 30px;
 }
-
+blockquote {
+    font-size: 2.4em;
+    color: #ccab09;
+    text-align: center;
+    font-weight: 700;
+    margin-top: 50px;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
 
 /* ====== HEADER ====== */
 header {
     padding: 4px 0 5px;
 }
 nav {
-    display: table;
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
@@ -217,6 +227,202 @@ nav .close span:nth-child(2) {
 }
 /* ====== HEADER END ======*/
 
+/* ====== NAJPOPULARNIJE ======*/
+
+#najpopularnije {
+    text-align: center;
+}
+#najpopularnije {
+    background-image: url("../img/logo-background.png");
+    background-size: cover;
+    background-position: 0 -100px;
+    background-repeat: no-repeat;
+}
+
+#najpopularnije .column {
+    margin-bottom: 40px;
+}
+#najpopularnije .column div{
+    display: inline-block;
+    width: 164px;
+    height: 164px;
+    background-color: #fff;
+    border-radius: 50%;
+    overflow: hidden;
+    padding: 5px;
+    border: 2px solid #ccab09;
+}
+#najpopularnije .column div img {
+    max-height: 100%;
+    border-radius: 50%; 
+}
+#najpopularnije .column p {
+    color: #ccab09;
+    font-size: 1,6em;
+    font-weight: 700;
+}
+#najpopularnije .column p span {
+    display: block;
+    color: #333;
+    font-weight: 300;
+}
+/* ====== NAJPOPULARNIJE END ======*/
+
+/* ====== USLUGE ======*/
+
+#usluge .tabs {
+    padding: 40px 0 20px;
+    cursor: pointer;
+}
+#usluge .uvodni-tekst {
+    font-size: 1.4em; 
+    text-align: center;
+}
+#usluge .btn.btn-tab {
+    background-color: transparent;
+    color: #333;
+    font-size: 1.4em;
+    font-weight: 300;
+    text-align: center;
+    border: 1px solid #333;
+    margin-bottom: 2px;
+}
+#usluge .btn.btn-tab.active {
+    background-color: #ccab09;
+    color: #fff;
+    border: #ccab09;
+}
+#usluge .vrste-usluga ul {
+    display: none;
+}
+#usluge .vrste-usluga ul.active{
+    display:block;
+}
+#usluge .vrste-usluga li {
+    position: relative;
+    margin-bottom: 25px;
+}
+#usluge .vrste-usluga p {
+    display: inline;
+    font-size: 1.4em;
+    font-weight: 500;
+    text-align: left;
+    position: relative;
+    padding-right: 15px;
+    margin-bottom: 10px;
+    background-color: #fff;
+    z-index: 1;
+}
+#usluge .vrste-usluga li::after {
+    content: "";
+    border-top: 1px dashed #333;
+    width: 100%;
+    position: absolute;
+    bottom: 9px;
+    left: 0;
+    z-index: -1;
+}
+#usluge .vrste-usluga span {
+    position: absolute;
+    right: 0;
+    padding-left: 15px;
+    background-color: #fff;
+    font-weight: 500;
+}
+/* ====== USLUGE END ======*/
+
+/* ====== O NAMA ====== */
+#onama p {
+    font-size: 1.2em;
+}
+/* ====== O NAMA END ====== */
+
+/* ====== GALERIJA ====== */
+
+#galerija li {
+    height: 0;
+    width: calc(50% - 10px);
+    float: left;
+    padding-bottom: calc(50% - 20px);
+    overflow: hidden;
+    margin-bottom: 20px;
+    position: relative;
+}
+#galerija li img {
+    width: auto;
+    position: absolute;
+    height: 100%;
+}
+#galerija li:nth-child(odd){
+    margin-right: 20px;
+}
+/* ====== GALERIJA END ====== */
+
+@media only screen and (min-width: 768px){
+/* ====== NAJPOPULARNIJE ======*/
+#najpopularnije .column {
+    float: left;
+    width: 50%;
+}
+/* ====== NAJPOPULARNIJE END ======*/
+
+/* ====== USLUGE ======*/
+#usluge .tabs {
+    text-align: center;
+}
+#usluge .tabs li.btn {
+    display: inline-block;
+    margin: 0 10px 10px;
+}
+#usluge .vrste-usluga li{
+    width: 46%;
+    float: left;
+    margin-bottom: 35px;
+}
+#usluge .vrste-usluga li:nth-child(even) {
+    margin-left: 15px;
+}
+#usluge .vrste-usluga li:nth-child(odd) {
+    margin-right: 15px;
+}
+#usluge .tabs li.btn:hover {
+    background-color: #999;
+    color: #fff;
+}
+/* ====== USLUGE END ======*/
+
+/* ====== O NAMA ====== */
+#onama p {
+    font-size: 1.8em;
+    width: 50%;
+    float: left;
+}
+#onama p:first-of-type {
+    padding-right: 15px;
+}
+#onama p:nth-child(2) {
+    padding-left: 15px;
+}
+
+/* ====== O NAMA END ====== */
+
+/* ====== GALERIJA ====== */
+#galerija li {
+    width: calc(33.33% - 13.33px);
+    padding-bottom: calc(33.33% - 20px);
+}
+#galerija li:nth-child(odd){
+    margin-right: 0;
+}
+#galerija li:nth-child(3n+2) {
+    margin-left:20px;
+    margin-right: 20px;
+}
+/* ====== GALERIJA END ====== */
+}
+
+
+
 @media only screen and (min-width: 1024px) {
     /* ======== HEADER ========== */
     header {
@@ -247,8 +453,50 @@ nav .close span:nth-child(2) {
 nav .close {
     display: none;
     }
-}
+
 /* ====== HEADER END ====== */
+
+/* ====== SEKCIJA NAJPOPULARNIJE ====== */
+
+#najpopularnije {
+    padding: 70px 0 70px;
+}
+#najpopularnije .column {
+    width: 25%;
+    padding:0 30px 0 30px;
+}
+
+/* ====== NAJPOPULARNIJE END ====== */
+
+/* ====== USLUGE ====== */
+
+#usluge .vrste-usluga p, #usluge .vrste-usluga span {
+    font-size: 1.8em;
+}
+
+/* ====== USLUGE END ====== */
+
+/* ====== GALERIJA ====== */
+#galerija li {
+    width: calc(25% - 15px);
+    padding-bottom: calc(25% - 20px);
+}
+#galerija li:nth-child(3n+2){
+    margin-right: 0;
+    margin-left: 0;
+}
+#galerija li:nth-child(4n+2){
+    margin-left: 20px;
+    margin-right: 10px;
+}
+#galerija li:nth-child(4n+3){
+    margin-left: 10px;
+    margin-right: 20px;
+}
+
+
+/* ====== GALERIJA END ====== */
+}
 
 
 
